@@ -1,0 +1,57 @@
+@import "../styles/core/mixins";
+
+:host{
+  .wrapper {
+    align-items: stretch;
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .left-sidebar {
+    display: block;
+    width: 290px;
+    flex-shrink: 0;
+    background: $sideBarBg;
+  }
+
+  .logo {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+    max-height: 70px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 50px;
+    }
+  }
+
+  .main-container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+
+    &>*{
+      width: 100%;
+    }
+  }
+}
+

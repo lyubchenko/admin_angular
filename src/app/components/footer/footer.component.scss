@@ -1,0 +1,13 @@
+@import "../../../styles/core/mixins";
+
+:host {
+  footer {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background: #ffffff;
+  }
+}

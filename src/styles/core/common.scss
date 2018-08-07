@@ -1,0 +1,38 @@
+
+body{
+  font-family: "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif;;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1em;
+  color: $defaultColorText;
+  padding: 0;
+  margin: 0;
+
+}
+
+.container{
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: $defaultColorLink;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

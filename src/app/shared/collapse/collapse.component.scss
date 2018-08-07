@@ -1,0 +1,42 @@
+@import "../../../styles/core/mixins";
+
+:host {
+  .collapse {
+    border-top: 1px solid $defaultBorderColor;
+    border-bottom: 1px solid $defaultBorderColor;
+    margin: -1px 0 auto;
+
+    &-btn {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+      position: relative;
+      padding-right: 45px;
+
+      i {
+        color: $iconColor;
+      }
+      .caret {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+      &.active {
+        .fa-chevron-down {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-body {
+      display: none;
+      padding: 0 10px 10px;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

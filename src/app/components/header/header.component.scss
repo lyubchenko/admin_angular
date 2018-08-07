@@ -1,0 +1,104 @@
+@import "../../../styles/core/mixins";
+
+:host {
+  .header {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: $topMenuBg;
+    border-bottom: 1px solid $defaultBorderColor;
+  }
+  .toggle {
+    width: 70px;
+    flex-shrink: 0;
+
+    a{
+      font-size: 25px;
+      line-height: 1em;
+      color: $defaultColorTitle;
+      text-align: center;
+      display: block;
+      width: auto;
+      padding: 15px;
+    }
+  }
+  .nav {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    li {
+      display: block;
+    }
+    .dropdown-toggle {
+      align-items: center;
+      justify-content: flex-start;
+      display: flex;
+      width: auto;
+      max-width: 200px;
+      height: 57px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 0 10px;
+
+      &:hover {
+        background: $defaultHoverBg;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+
+    .message {
+      position: relative;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      i {
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 13px;
+        color: #ffffff;
+        padding: 2px 6px;
+        background: #1ABB9C;
+        border-radius: 50%;
+        flex-shrink: 0;
+        position: absolute;
+        right: 2px;
+        top: 12px;
+      }
+    }
+
+    .user-profile {
+
+      .img-container {
+        width: 29px;
+        height: 29px;
+        margin-right: 5px;
+        border: 1px solid $defaultBorderColor;
+        border-radius: 50%;
+        background: #ffffff;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<nav class="main-menu">
+  <ul>
+    <li *ngFor="let category of menuList">
+      <a [routerLink]="category.url"
+         routerLinkActive="activated">
+        <i class="{{category.imgClass}}"></i>
+        {{category.title}}
+        <i class="fa fa-chevron-down"></i>
+      </a>
+      <ul *ngIf = "category && category.item?.length" >
+        <li *ngFor = "let item of category">
+          <a [routerLink]="[item.url]"
+             routerLinkActive="activated">{{item.title}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
