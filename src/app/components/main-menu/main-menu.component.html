@@ -1,18 +1,20 @@
 <nav class="main-menu">
-  <ul>
-    <li *ngFor="let category of menuList">
-      <a [routerLink]="category.url"
-         routerLinkActive="activated">
-        <i class="{{category.imgClass}}"></i>
-        {{category.title}}
-        <i class="fa fa-chevron-down"></i>
-      </a>
-      <ul *ngIf = "category && category.item?.length" >
-        <li *ngFor = "let item of category">
-          <a [routerLink]="[item.url]"
-             routerLinkActive="activated">{{item.title}}</a>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let categoryMenu of mainMap">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <i class="material-icons">
+            {{categoryMenu.imgIcon}}
+          </i>
+          {{categoryMenu.title}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ul class="list-links" *ngIf="categoryMenu.items?.length">
+        <li *ngFor="let item of categoryMenu.items">
+          <a routerLink="{{item.sid}}">{{item.title}}</a>
         </li>
       </ul>
-    </li>
-  </ul>
+    </mat-expansion-panel>
+  </mat-accordion>
 </nav>

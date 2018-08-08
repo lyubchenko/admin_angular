@@ -1,5 +1,8 @@
 @import "../../../styles/core/mixins";
 
 :host {
-  padding-top: 20px;
+  .main-menu{
+    padding-top: 20px;
+
+  }
 }

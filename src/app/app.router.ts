@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import {} from ''
+import { Routes, RouterModule, NoPreloading } from '@angular/router';
 
 const appRoutes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    component:
+    children: [
+      {
+        path: 'tables',
+        loadChildren: './modules/tables-pages/tables-pages.module#TablesPagesModule'
+      }
+    ]
   }
 ];
 
