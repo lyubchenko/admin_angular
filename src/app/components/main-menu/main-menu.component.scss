@@ -1,8 +1,96 @@
 @import "../../../styles/core/mixins";
 
 :host {
+  &::ng-deep {
+    .mat-expansion-panel {
+      margin: 0;
+      box-shadow: none!important;
+
+      &.mat-expansion-panel-spacing {
+        border-right: 5px solid #1ABB9C;
+
+        .menu-panel-header {
+          text-shadow: rgba(0,0,0,.25) 0 -1px 0;
+          margin-bottom: 1px;
+          background: linear-gradient(#334556,#2C4257),#2A3F54;
+          box-shadow: rgba(0,0,0,.25) 0 1px 0, inset rgba(255,255,255,.16) 0 1px 0;
+        }
+      }
+    }
+    .mat-expansion-panel-body {
+      padding: 0;
+    }
+  }
+
   .main-menu{
     padding-top: 20px;
 
+  }
+
+  .menu-panel-header {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: $menuColorLink;
+    height: auto!important;
+    max-height: 45px;
+    padding: 13px 15px 12px;
+
+    i {
+      font-size: 18px;
+      margin-right: 5px;
+
+    }
+  }
+
+  .list-links {
+    display: block;
+    width: 100%;
+    border-top: 1px solid $sideBarBg;
+
+    li {
+      position: relative;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: #fff;
+      display: block;
+      width: 100%;
+      padding: 9px 9px 9px 36px;
+      position: relative;
+
+      &.active,
+      &:hover {
+        text-decoration: none;
+        background: rgba(255,255,255,.05);
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin-top: 5px;
+        background: #425668;
+        border-radius: 50%;
+        position: absolute;
+        right: auto;
+        bottom: auto;
+        left: 20px;
+        z-index: 1;
+      }
+
+      &:after{
+        content: "";
+        border-left: 1px solid #425668;
+        position: absolute;
+        bottom: 0;
+        left: 23px;
+        top: 0;
+      }
+    }
   }
 }

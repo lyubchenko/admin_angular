@@ -11,18 +11,6 @@ export class MainMenuComponent implements OnInit {
   public mainMap: Object[] = [
     {
       id: 1,
-      title: 'Home',
-      sid: '',
-      imgIcon: 'home',
-      items: [
-        {
-          title: 'link 1',
-          sid: '/link_1'
-        }
-      ]
-    },
-    {
-      id: 2,
       title: 'Forms',
       sid: '/form',
       imgIcon: 'home',
@@ -38,10 +26,10 @@ export class MainMenuComponent implements OnInit {
       ]
     },
     {
-      id: 3,
+      id: 2,
       title: 'Tables',
       sid: 'tables',
-      imgIcon: 'bug_report',
+      imgIcon: 'table_chart',
       items: [
         {
           title: 'Tables',
@@ -54,7 +42,7 @@ export class MainMenuComponent implements OnInit {
       ]
     },
     {
-      id: 4,
+      id: 3,
       title: 'Additional Pages',
       sid: '/additional_pages',
       imgIcon: 'bug_report',
@@ -70,7 +58,7 @@ export class MainMenuComponent implements OnInit {
       ]
     },
     {
-      id: 5,
+      id: 4,
       title: 'Data Presentation',
       sid: '/chart',
       imgIcon: 'bar_chart',

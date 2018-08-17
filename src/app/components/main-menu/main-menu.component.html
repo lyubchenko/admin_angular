@@ -1,7 +1,7 @@
 <nav class="main-menu">
   <mat-accordion>
     <mat-expansion-panel *ngFor="let categoryMenu of mainMap">
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header class="menu-panel-header">
         <mat-panel-title>
           <i class="material-icons">
             {{categoryMenu.imgIcon}}
@@ -12,9 +12,10 @@
 
       <ul class="list-links" *ngIf="categoryMenu.items?.length">
         <li *ngFor="let item of categoryMenu.items">
-          <a routerLink="{{item.sid}}">{{item.title}}</a>
+          <a routerLink="{{item.sid}}" routerLinkActive="active">{{item.title}}</a>
         </li>
       </ul>
+
     </mat-expansion-panel>
   </mat-accordion>
 </nav>
