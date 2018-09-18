@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // component
-import {TablesDynamicPageComponent} from './tables-dynamic-page.component/tables-dynamic-page.component';
+import {TablesDynamicPageComponent} from './tables-dynamic-page/tables-dynamic-page.component';
 import {TablesPageComponent} from './tables-page/tables-page.component';
 
 const tablesRoutes: Routes = [

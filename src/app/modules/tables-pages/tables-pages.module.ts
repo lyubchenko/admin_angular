@@ -5,7 +5,7 @@ import { TablesRoutingModule} from './tables-pages.router';
 
 // component
 import {TablesPageComponent} from './tables-page/tables-page.component';
-import {TablesDynamicPageComponent} from './tables-dynamic-page.component/tables-dynamic-page.component';
+import {TablesDynamicPageComponent} from './tables-dynamic-page/tables-dynamic-page.component';
 
 
 @NgModule({

@@ -13,3 +13,4 @@ export class TablesPageComponent implements OnInit, OnDestroy {
   ngOnDestroy() {}
 
 }
+

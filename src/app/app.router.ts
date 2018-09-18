@@ -8,6 +8,10 @@ const appRoutes: Routes = [
       {
         path: 'tables',
         loadChildren: './modules/tables-pages/tables-pages.module#TablesPagesModule'
+      },
+      {
+        path: 'forms',
+        loadChildren: './modules/forms-pages/forms-pages.module#FormsPagesModule'
       }
     ]
   }
