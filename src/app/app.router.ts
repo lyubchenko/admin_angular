@@ -12,6 +12,14 @@ const appRoutes: Routes = [
       {
         path: 'forms',
         loadChildren: './modules/forms-pages/forms-pages.module#FormsPagesModule'
+      },
+      {
+        path: 'additional_pages',
+        loadChildren: './modules/additional-pages/additional-pages.module#AdditionalPagesModule'
+      },
+      {
+        path: 'chart',
+        loadChildren: './modules/chart-pages/chart-pages.module#ChartPagesModule'
       }
     ]
   }

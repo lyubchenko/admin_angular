@@ -28,4 +28,4 @@ const tablesRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class TablesRoutingModule {}
+export class TablesPagesRoutingModule {}

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TablesRoutingModule} from './tables-pages.router';
+import { TablesPagesRoutingModule} from './tables-pages.router';
 
 // component
 import {TablesPageComponent} from './tables-page/tables-page.component';
@@ -11,7 +11,7 @@ import {TablesDynamicPageComponent} from './tables-dynamic-page/tables-dynamic-p
 @NgModule({
   imports: [
     CommonModule,
-    TablesRoutingModule
+    TablesPagesRoutingModule
   ],
   declarations: [
     TablesPageComponent,
@@ -19,8 +19,6 @@ import {TablesDynamicPageComponent} from './tables-dynamic-page/tables-dynamic-p
   ],
   exports: [
     CommonModule,
-    TablesPageComponent,
-    TablesDynamicPageComponent
   ]
 })
 export class TablesPagesModule {}

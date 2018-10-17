@@ -17,11 +17,11 @@ export class MainMenuComponent implements OnInit {
       items: [
         {
           title: 'General Form',
-          sid: '/form'
+          sid: '/forms'
         },
         {
           title: 'Form wizards',
-          sid: '/form/form_wizards'
+          sid: '/forms/form_wizards'
         }
       ]
     },
@@ -49,11 +49,11 @@ export class MainMenuComponent implements OnInit {
       items: [
         {
           title: 'E commerce',
-          sid: 'e_commerce'
+          sid: '/additional_pages'
         },
         {
           title: 'Project detail',
-          sid: 'project_detail'
+          sid: '/additional_pages/project_detail'
         }
       ]
     },
@@ -65,7 +65,7 @@ export class MainMenuComponent implements OnInit {
       items: [
         {
           title: 'D3.js',
-          sid: 'd3'
+          sid: '/chart/d3'
         }
       ]
     }

@@ -23,4 +23,4 @@ const formsRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class FormsRoutingModule {}
+export class FormsPagesRoutingModule {}
