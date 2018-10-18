@@ -12,7 +12,7 @@
 
       <ul class="list-links" *ngIf="categoryMenu.items?.length">
         <li *ngFor="let item of categoryMenu.items">
-          <a routerLink="{{item.sid}}" routerLinkActive="active">{{item.title}}</a>
+          <a [routerLink]="createRouterLink(categoryMenu, item)" routerLinkActive="active">{{item.title}}</a>
         </li>
       </ul>
 

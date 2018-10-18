@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AppBasicService } from 'app/services/app-basic/app-basic.service';
 
+import { IMainMenu } from 'app/interfaces/main-menu';
 
 @Component({
   selector: 'app-main-menu',
@@ -8,74 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent implements OnInit {
-  public mainMap: Object[] = [
-    {
-      id: 1,
-      title: 'Forms',
-      sid: '/form',
-      imgIcon: 'home',
-      items: [
-        {
-          title: 'General Form',
-          sid: '/forms'
-        },
-        {
-          title: 'Form wizards',
-          sid: '/forms/form_wizards'
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: 'Tables',
-      sid: 'tables',
-      imgIcon: 'table_chart',
-      items: [
-        {
-          title: 'Tables',
-          sid: '/tables'
-        },
-        {
-          title: 'Tables dynamic',
-          sid: '/tables/tables_dynamic'
-        }
-      ]
-    },
-    {
-      id: 3,
-      title: 'Additional Pages',
-      sid: '/additional_pages',
-      imgIcon: 'bug_report',
-      items: [
-        {
-          title: 'E commerce',
-          sid: '/additional_pages'
-        },
-        {
-          title: 'Project detail',
-          sid: '/additional_pages/project_detail'
-        }
-      ]
-    },
-    {
-      id: 4,
-      title: 'Data Presentation',
-      sid: '/chart',
-      imgIcon: 'bar_chart',
-      items: [
-        {
-          title: 'D3.js',
-          sid: '/chart/d3'
-        }
-      ]
-    }
-  ];
-  constructor() {
+  public mainMap: IMainMenu[] = [];
+
+  constructor(
+    private appBasic: AppBasicService
+  ) {}
+
+  ngOnInit() {
+    this.appBasic.getMainMenu()
+      .subscribe( data => this.mainMap = data);
 
   }
 
-  ngOnInit() {
-
-}
+  public createRouterLink(categoryMenu, item): string {
+    let url: string = '/' + categoryMenu.sid;
+    if (item.sid && item.sid.length) {
+      url += '/' + item.sid;
+    }
+    return url;
+  }
 
 }

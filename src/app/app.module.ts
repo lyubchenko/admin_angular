@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule} from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { MaterialAppModule } from './ngmaterial.module';
 
 // libs
@@ -9,6 +10,9 @@ import { MaterialAppModule } from './ngmaterial.module';
 // app
 import { AppComponent } from './app.component';
 import { AppRouterModule } from './app.router';
+
+// services
+import { AppBasicService } from './services/app-basic/app-basic.service';
 
 // component
 import { HeaderComponent } from './components/header/header.component';
@@ -25,6 +29,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
+    HttpClientModule,
     MaterialAppModule,
     AppRouterModule,
     // SharedModule
@@ -36,7 +41,9 @@ import { SharedModule } from './shared/shared.module';
     FooterComponent,
     MainMenuComponent
   ],
-  providers: [],
+  providers: [
+    AppBasicService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

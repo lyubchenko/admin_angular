@@ -1,0 +1,64 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "title": "Forms",
+      "sid": "forms",
+      "imgIcon": "home",
+      "items": [
+        {
+          "title": "General Form",
+          "sid": ""
+        },
+        {
+          "title": "Form wizards",
+          "sid": "form_wizards"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tables",
+      "sid": "tables",
+      "imgIcon": "table_chart",
+      "items": [
+        {
+          "title": "Tables",
+          "sid": ""
+        },
+        {
+          "title": "Tables dynamic",
+          "sid": "tables_dynamic"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Additional Pages",
+      "sid": "additional_pages",
+      "imgIcon": "bug_report",
+      "items": [
+        {
+          "title": "E commerce",
+          "sid": ""
+        },
+        {
+          "title": "Project detail",
+          "sid": "project_detail"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Data Presentation",
+      "sid": "chart",
+      "imgIcon": "bar_chart",
+      "items": [
+        {
+          "title": "D3.js",
+          "sid": "d3"
+        }
+      ]
+    }
+  ]
+}
