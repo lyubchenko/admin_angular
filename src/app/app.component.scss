@@ -12,6 +12,7 @@
     margin: 0;
     flex-direction: row;
     flex-wrap: nowrap;
+    background: $defaultBg;
   }
 
   .left-sidebar {
@@ -51,6 +52,20 @@
 
     &>*{
       width: 100%;
+    }
+
+    .app-header {
+      flex-shrink: 0;
+    }
+
+    .main-page {
+      width: 100%;
+      height: 100%;
+      padding: 0 10px 0;
+    }
+
+    .app-footer {
+      flex-shrink: 0;
     }
   }
 }

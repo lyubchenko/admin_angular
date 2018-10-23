@@ -1,0 +1,27 @@
+<div class="panel__header">
+  <h2 class="panel__title">
+    {{title}}
+    <small *ngIf="subtitle">{{subtitle}}</small>
+  </h2>
+  <div class="panel__settings">
+    <ul>
+      <li>
+        <a href="" class="panel__collapse" (click)="slideToggle($event)">
+          <i class="material-icons">
+            expand_less
+          </i>
+        </a>
+      </li>
+      <li *ngIf="showCloseBtn">
+        <a href="" class="panel__close" (click)="destroyComponent($event)">
+          <i class="material-icons">
+            close
+          </i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="panel__body" [ngClass]="{'show': showContent}">
+  <ng-content></ng-content>
+</div>

@@ -22,7 +22,6 @@ export class AppBasicService implements OnInit {
   public getMainMenu(): Observable<IMainMenu[]> {
     return this.http.get<IMainMenu[]>('http://localhost:3004/menu')
       .pipe(
-        tap(data => console.log('fetched main menu')),
         catchError(this.handleError('getMainMenu', []))
       );
   }

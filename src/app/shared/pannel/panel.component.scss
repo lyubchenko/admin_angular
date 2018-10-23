@@ -1,0 +1,75 @@
+@import "../../../styles/core/mixins";
+
+:host {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  margin-bottom: 15px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background: $whiteBg;
+
+  .panel {
+    &__header {
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      width: 100%;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      padding: 5px 10px 7px;
+      border-bottom: 2px solid $panelBorderColor;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 20px;
+      margin: 0;
+
+      small {
+        color: #777;
+      }
+    }
+    &__settings {
+      display: inline-block;
+      width: auto;
+      padding-left: 10px;
+      flex-shrink: 0;
+
+      li {
+        display: inline-block;
+        float: left;
+      }
+      a {
+        font-size: 14px;
+        color: $iconColor;
+        display: block;
+        padding: 5px;
+
+        &.panel__close {
+          .material-icons {
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    &__body {
+      display: none;
+      padding: 10px 5px 6px;
+      height: 0;
+      transition: height ease .5s;
+      overflow: hidden;
+
+      &.show {
+        display: block;
+        height: auto;
+      }
+    }
+  }
+}
