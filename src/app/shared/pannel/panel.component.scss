@@ -1,15 +1,17 @@
 @import "../../../styles/core/mixins";
 
 :host {
-  width: 100%;
-  padding: 10px 0;
-  display: flex;
-  margin-bottom: 15px;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  background: $whiteBg;
-
   .panel {
+    &__wrapper {
+      width: 100%;
+      padding: 10px 0;
+      display: flex;
+      margin-bottom: 15px;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      background: $whiteBg;
+    }
+
     &__header {
       align-items: center;
       justify-content: space-between;

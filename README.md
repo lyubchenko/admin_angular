@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Json server
 npm install -g json-server
-Run `json-server --watch db.json`
+Run `json-server --watch db.json --port 3004`
  
 ## Development server
 

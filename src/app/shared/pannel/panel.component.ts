@@ -13,6 +13,7 @@ export class PanelComponent implements OnInit, OnDestroy {
   @Output() collapseEvent = new EventEmitter<boolean>();
 
   public showContent: boolean = true;
+  public destroyPanel: boolean = false;
 
   constructor() {}
 
@@ -24,7 +25,8 @@ export class PanelComponent implements OnInit, OnDestroy {
   }
 
   destroyComponent($event): void {
-
+    $event.preventDefault();
+    this.destroyPanel = true;
   }
 
   ngOnDestroy() {}
