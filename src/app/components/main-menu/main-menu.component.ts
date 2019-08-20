@@ -18,7 +18,7 @@ export class MainMenuComponent implements OnInit {
 
   ngOnInit() {
     this.appBasic.getMainMenu()
-      .subscribe( data => this.mainMap = data);
+      .subscribe( (data: IMainMenu[]) => this.mainMap = data);
 
   }
 

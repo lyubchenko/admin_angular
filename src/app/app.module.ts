@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
 import { AppRouterModule } from './app.router';
 
 // services
-import { AppBasicService } from './services/app-basic/app-basic.service';
+import { AppBasicService } from '@services/app-basic/app-basic.service';
+import { ApiService } from '@services/api/api.service';
 
 // component
 import { HeaderComponent } from './components/header/header.component';
@@ -20,7 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 // modules
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 
 // services
 
@@ -42,7 +43,8 @@ import { SharedModule } from './shared/shared.module';
     MainMenuComponent
   ],
   providers: [
-    AppBasicService
+    AppBasicService,
+    ApiService
   ],
   bootstrap: [AppComponent]
 })

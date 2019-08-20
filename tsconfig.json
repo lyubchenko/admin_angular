@@ -15,10 +15,28 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@env/*": [
+        "./environments/*"
+      ],
+      "@interfaces/*": [
+        "./app/interfaces/*"
+      ],
+      "@services/*": [
+        "./app/services/*"
+      ],
+      "@shared/*": [
+        "./app/shared/*"
+      ]
+    }
   },
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }

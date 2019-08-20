@@ -4,12 +4,14 @@
   .panel {
     &__wrapper {
       width: 100%;
-      padding: 10px 0;
+      padding: 10px 0 0;
       display: flex;
       margin-bottom: 15px;
       flex-direction: column;
       flex-wrap: nowrap;
       background: $whiteBg;
+      border-radius: 5px;
+      overflow: hidden
     }
 
     &__header {
@@ -20,7 +22,6 @@
       flex-wrap: nowrap;
       flex-direction: row;
       padding: 5px 10px 7px;
-      border-bottom: 2px solid $panelBorderColor;
     }
 
     &__title {
@@ -63,8 +64,9 @@
 
     &__body {
       display: none;
-      padding: 10px 5px 6px;
+      padding: 10px 5px 10px;
       height: 0;
+      border-top: 2px solid $panelBorderColor;
       transition: height ease .5s;
       overflow: hidden;
 
