@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TablesPagesRoutingModule} from './tables-pages.router';
 
 // module
-import { SharedModule } from 'app/shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 
 // component
 import {TablesPageComponent} from './tables-page/tables-page.component';

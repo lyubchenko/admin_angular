@@ -16,7 +16,7 @@ export class ApiService {
     this.headers =  new HttpHeaders({'Content-Type': 'application/json'});
   }
 
-  public get<T>(url: string, queryParameters?: object | string) {
+  public get<T>(url: string, queryParameters?: object | string, ) {
     if (typeof queryParameters === 'object') {
       queryParameters = this.joinQueryParameters(queryParameters);
 

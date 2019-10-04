@@ -1,9 +1,9 @@
-import { OnInit, Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 
 import { ApiService } from '@services/api/api.service';
 
-import { IMainMenu } from '@interfaces/main-menu';
+import { IMainMenu } from '@models/main-menu';
 
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';

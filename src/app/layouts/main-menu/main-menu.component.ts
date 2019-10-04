@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AppBasicService } from 'app/services/app-basic/app-basic.service';
+import { AppBasicService } from '@services/app-basic/app-basic.service';
 
-import { IMainMenu } from 'app/interfaces/main-menu';
+import { IMainMenu } from '@models/main-menu';
 
 @Component({
   selector: 'app-main-menu',

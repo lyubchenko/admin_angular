@@ -16,9 +16,9 @@ import { AppBasicService } from '@services/app-basic/app-basic.service';
 import { ApiService } from '@services/api/api.service';
 
 // component
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { HeaderComponent } from './layouts/header/header.component';
+import { FooterComponent } from './layouts/footer/footer.component';
+import { MainMenuComponent } from './layouts/main-menu/main-menu.component';
 
 // modules
 import { SharedModule } from '@shared/shared.module';
