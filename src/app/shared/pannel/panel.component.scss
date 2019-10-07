@@ -1,4 +1,4 @@
-@import "../../../styles/core/mixins";
+@import "~src/styles/core/mixins";
 
 :host {
   .panel {
@@ -9,7 +9,7 @@
       margin-bottom: 15px;
       flex-direction: column;
       flex-wrap: nowrap;
-      background: $whiteBg;
+      background: $white;
       border-radius: 5px;
       overflow: hidden
     }
@@ -64,11 +64,12 @@
 
     &__body {
       display: none;
-      padding: 10px 5px 10px;
+      padding: 10px 15px 10px;
       height: 0;
       border-top: 2px solid $panelBorderColor;
       transition: height ease .5s;
       overflow: hidden;
+      box-sizing: border-box;
 
       &.show {
         display: block;

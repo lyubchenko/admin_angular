@@ -1,0 +1,28 @@
+@import "~src/styles/core/mixins";
+
+table {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid $sideBarBg;
+  overflow: hidden;
+}
+th{
+  color: $white;
+  background: $sideBarBg;
+}
+
+.mat-row {
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(38,185,154,.07)!important;
+  }
+
+  &:nth-child(2n + 2) {
+    background: #f9f9f9;
+  }
+
+  &:last-child td {
+    border-bottom: 0;
+  }
+}

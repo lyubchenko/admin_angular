@@ -5,24 +5,27 @@ import { TablesPagesRoutingModule} from './tables-pages.router';
 
 // module
 import { SharedModule } from '@shared/shared.module';
+import { MaterialAppModule } from '../../ngmaterial.module';
+
+// service
+import { TablesService } from './services/tables.service';
 
 // component
 import {TablesPageComponent} from './tables-page/tables-page.component';
-import {TablesDynamicPageComponent} from './tables-dynamic-page/tables-dynamic-page.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     TablesPagesRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialAppModule
   ],
   declarations: [
-    TablesPageComponent,
-    TablesDynamicPageComponent
+    TablesPageComponent
   ],
-  exports: [
-    CommonModule,
+  providers: [
+    TablesService
   ]
 })
 export class TablesPagesModule {}

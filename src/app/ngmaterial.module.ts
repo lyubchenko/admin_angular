@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // material component
 import { MatExpansionModule } from '@angular/material';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [
-    CommonModule,
-    BrowserAnimationsModule,
-    // material component
     MatExpansionModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [
     MatExpansionModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialAppModule { }

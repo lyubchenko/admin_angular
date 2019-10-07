@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // component
-import {TablesDynamicPageComponent} from './tables-dynamic-page/tables-dynamic-page.component';
-import {TablesPageComponent} from './tables-page/tables-page.component';
+import { TablesPageComponent } from './tables-page/tables-page.component';
 
 const tablesRoutes: Routes = [
   {
@@ -13,11 +12,6 @@ const tablesRoutes: Routes = [
         path: '',
         pathMatch: 'full',
         component: TablesPageComponent
-      },
-      {
-        path: 'tables_dynamic',
-        pathMatch: 'full',
-        component: TablesDynamicPageComponent
       }
     ]
   },

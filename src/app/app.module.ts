@@ -33,7 +33,6 @@ import { SharedModule } from '@shared/shared.module';
     HttpClientModule,
     MaterialAppModule,
     AppRouterModule,
-    // SharedModule
     SharedModule
   ],
   declarations: [
